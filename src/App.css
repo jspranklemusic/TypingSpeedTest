@@ -1,10 +1,181 @@
-.App {
-  text-align: center;
+html,body{
+  background:linear-gradient(rgb(43, 43, 58), rgb(23, 23, 36));
+  width:100%;
+  height:100%;
+  color:rgba(240,240,240);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  position: relative;
+  box-sizing:border-box;
+}
+
+h1{
+  width:max-content;
+  padding:0.5rem;
+  margin:1rem auto;
+  display:flex;
+  align-items:center;
+  animation:fade-simple 2s backwards;
+}
+h2{
+  color:rgb(44, 160, 90);
+  font-weight:bold;
+  text-align:center;
+}
+h2{
+  margin:0.5rem auto;
+}
+em{
+  display:flex;
+  align-items:center;
+  width:100%;
+  justify-content: center;
+  color:rgba(255,255,255,.7);
+  margin:1rem auto;
+  animation:fade-left 1s backwards;
+  animation-delay:1s;
+}
+em>img{
+  width:1.5rem;
+  height:1.5rem;
+  margin-right:.25rem;
+}
+h3{
+  font-family:monospace;
+  background:black;
+  width:max-content;
+  margin:1rem auto;
+  width:2.5rem;
+  height:2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size:1.5rem;
+  color:rgb(206, 111, 104);
+  
+
+}
+
+h1>img{
+  width:4rem;
+  height:4rem;
+  margin:0 1rem;
+  margin-top:-0.75rem;
+}
+
+h1::after{
+  height:3px;
+  border-radius:5px;
+  width:95%;
+  content:"";
+  position: absolute;
+  bottom:2px;
+  left:5%;
+  background:rgb(65, 165, 95);
+}
+h4{
+  width:max-content;
+  padding:0.5rem;
+  margin:0 auto;
+  animation:fade-up 1s backwards;
+}
+h4::after{
+  height:3px;
+  border-radius:5px;
+  width:100%;
+  content:"";
+  position: absolute;
+  bottom:0;
+  left:0;
+  background:rgb(65, 165, 95);
+  animation:widen 0.5s backwards;
+  animation-delay:0.75s;
+}
+
+
+button{
+  background:rgb(65, 165, 95);
+  padding:1rem 2rem;
+  font-size:1rem;
+  border:none;
+  border-radius:5px;
+  font-weight:bold;
+  color:white;
+  margin:1rem;
+  transition:0.2s;
+  cursor: pointer;
+
+}
+button:hover{
+  background:rgb(32, 105, 54);
+}
+button:active{
+  opacity:0.7;
+}
+
+.fade-in{
+  animation:fade-simple 1s backwards;
+  animation-delay:1s;
+}
+
+ul{
+  text-align:left;
+}
+li{
+  padding:0.7rem;
+  border-bottom:2px solid rgba(200,200,200,0.5);
+}
+
+.App {
+  text-align: center;
+  height:100%;
+  overflow:scroll;
+  background:transparent;
+}
+
+
+.paragraph-container{
+  width:100%;
+  max-width:600px;
+  height:max-content;
+  max-height:400px;
+  padding:1rem;
+  margin:1rem auto;
+  background:white;
+  border-radius:5px;
+  line-height:1.75rem;
+  font-size:1.2rem;
+  letter-spacing: 0.5px;
+  font-weight:500;
+  text-align:left;
+  color:rgba(25,25,25);
+  transition:0.2s;
+}
+ 
+
+p{
+  margin:0;
+  padding:0;
+}
+
+.scroll-y{
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+
+.flex-container{
+  display:flex;
+  align-items:center;
+  width:100%;
+  justify-content: center;
+
+}
+.flex-container>*{
+  margin:0 1rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +207,44 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes fade-left{
+  0%{
+    opacity:0;
+    transform:translateX(-2rem);
+  }
+  100%{
+    opacity:1;
+    transform:translateX(0rem);
+  }
+}
+
+@keyframes fade-up{
+  0%{
+    opacity:0;
+    transform:translateY(2rem);
+  }
+  100%{
+    opacity:1;
+    transform:translateX(0rem);
+  }
+}
+
+@keyframes fade-simple{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+@keyframes widen{
+  0%{
+    width:0%;
+  }
+  100%{
+    width:100%;
+  }
+}
+
