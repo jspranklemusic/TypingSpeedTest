@@ -4,11 +4,11 @@ import keyboard from '../../assets/keyboard.svg'
 import info from '../../assets/information.svg'
 
 const texts=[
-    (importText.substring(0,1000)+"...").split(""),
-    (importText.substring(1509, 2509)+"...").split(""),
-    (importText.substring(3038, 4038)+"...").split(""),
-    (importText.substring(4474, 5474)+"...").split(""),
-    (importText.substring(6089, 7089)+"...").split(""),
+    (importText.substring(0,700)+"...").split(""),
+    (importText.substring(1509, 2309)+"...").split(""),
+    (importText.substring(3038, 3738)+"...").split(""),
+    (importText.substring(4474, 5174)+"...").split(""),
+    (importText.substring(6089, 6789)+"...").split(""),
 ]
 
 let text = texts[0];
@@ -98,7 +98,7 @@ const Home = ()=>{
         arr[index].checked = true;
 
         //incorrect
-        if(arr[index].char != e.key){
+        if(arr[index].char !== e.key){
             arr[index].invalid = true;
             setError(prevState=>prevState + 1);
 
